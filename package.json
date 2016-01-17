@@ -1,0 +1,36 @@
+{
+  "name": "debrowserify",
+  "version": "1.0.0",
+  "description": "Change browser fields of dependent packages as a postinstall hook",
+  "bin": "./dist/cmd.js",
+  "scripts": {
+    "build": "babel ./lib -d dist",
+    "watch": "babel ./lib -w -d dist",
+    "test": "babel-tape-runner test/*.js"
+  },
+  "author": "Aram Drevekenin",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.3.17",
+    "chokidar": "^1.4.2",
+    "commander": "^2.9.0",
+    "crx": "^3.0.3",
+    "debounce": "^1.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "babel-tape-runner": "^2.0.0",
+    "crx-parser": "^0.1.2",
+    "node-rsa": "^0.2.26",
+    "tape": "^4.4.0",
+    "through2": "^2.0.0"
+  }
+}
