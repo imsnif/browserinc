@@ -17,14 +17,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AdjustBrowserField = function (_Transform) {
   _inherits(AdjustBrowserField, _Transform);
 
-  function AdjustBrowserField(removes) {
+  function AdjustBrowserField(include) {
     var options = arguments.length <= 1 || arguments[1] === undefined ? { objectMode: true } : arguments[1];
 
     _classCallCheck(this, AdjustBrowserField);
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdjustBrowserField).call(this, options));
 
-    _this._removes = removes;
+    _this._include = include;
     return _this;
   }
 
@@ -37,7 +37,7 @@ var AdjustBrowserField = function (_Transform) {
       if (entry.parsed && entry.parsed.browser) {
         var changed = false;
         Object.keys(entry.parsed.browser).forEach(function (key) {
-          if (_this2._removes.indexOf(key) !== -1) {
+          if (_this2._include.indexOf(key) !== -1) {
             delete entry.parsed.browser[key];
             changed = true;
           }

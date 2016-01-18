@@ -34,9 +34,9 @@ function getPkgFromDir(dir) {
 
 var buf = _fs2.default.readFileSync(process.cwd() + '/package.json');
 var pkg = JSON.parse(buf.toString());
-if (!pkg.debrowserify.removes) throw new Error("Could not find list of removes in package.json");
+if (!pkg.browserinc.include) throw new Error("Could not find include list in package.json");
 var readPkg = new _readPkg2.default();
-var adjustBf = new _adjustBrowserField2.default(pkg.debrowserify.removes);
+var adjustBf = new _adjustBrowserField2.default(pkg.browserinc.include);
 var writeChanges = new _writeChanges2.default();
 readPkg.pipe(adjustBf).pipe(writeChanges);
 getPkgFromDir(process.cwd() + '/node_modules');

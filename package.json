@@ -1,5 +1,5 @@
 {
-  "name": "debrowserify",
+  "name": "browserinc",
   "version": "1.0.0",
   "description": "Change browser fields of dependent packages as a postinstall hook",
   "bin": "./dist/cmd.js",
