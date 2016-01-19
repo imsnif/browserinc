@@ -2,20 +2,8 @@ import test from 'tape'
 import fs from 'fs'
 import path from 'path'
 import find from 'findit'
-import tmp from 'tmp'
-import { ncp } from 'ncp'
+import tutils from './utils/test-utils'
 import { fork } from 'child_process'
-
-function prepareCase (dirName) {
-  return new Promise((resolve, reject) => {
-    tmp.dir({unsafeCleanup: true}, (err, tmpPath, cleanupCallback) => {
-      ncp(dirName, tmpPath, (err) => {
-        if (err) reject(err)
-        resolve(tmpPath)
-      })
-    })
-  })
-}
 
 function spawnCmd (cwd) {
   let cmd = path.join(__dirname, "..", "dist", "cmd.js")
@@ -55,7 +43,7 @@ test("Include excluded files", function(t) {
     t.fail("Extension not created")
   },5000)
   let cwd = path.join(__dirname, "fixtures", "case1")
-  prepareCase(cwd)
+  tutils.prepareCase(cwd)
     .then(spawnCmd)
     .then(findOccurrences.bind(this, "foo"))
     .then((occurrences) => {
