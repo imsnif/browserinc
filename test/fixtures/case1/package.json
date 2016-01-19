@@ -1,0 +1,8 @@
+{
+  "name": "case1",
+  "version": "0.0.1",
+  "description": "Test case 1",
+  "browserinc": {
+    "include": [ "foo" ]
+  }
+}
