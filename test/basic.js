@@ -21,18 +21,3 @@ test("Include excluded files", function(t) {
       t.end()
     })
 })
-
-test("Across multiple packages", function(t) {
-  t.pass()
-  t.end()
-})
-
-test("Only in specified path", function(t) {
-  t.pass()
-  t.end()
-})
-
-test("Recursive directories", function(t) {
-  t.pass()
-  t.end()
-})
