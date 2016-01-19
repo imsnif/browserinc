@@ -1,10 +1,10 @@
-import test from 'tape'
-import path from 'path'
+import test   from 'tape'
+import path   from 'path'
 import tutils from './utils/test-utils'
 
 test("Include excluded files", function(t) {
   let timer = setTimeout(() => {
-    t.fail("Extension not created")
+    t.fail("Not replaced")
   },5000)
   let cwd = path.join(__dirname, "fixtures", "case1")
   tutils.prepareCase(cwd)

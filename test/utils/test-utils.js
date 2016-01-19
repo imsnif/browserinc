@@ -1,8 +1,8 @@
-import tmp from 'tmp'
-import { ncp } from 'ncp'
-import fs from 'fs'
-import path from 'path'
-import find from 'findit'
+import tmp      from 'tmp'
+import fs       from 'fs'
+import path     from 'path'
+import find     from 'findit'
+import { ncp }  from 'ncp'
 import { fork } from 'child_process'
 
 export default {
