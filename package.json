@@ -21,7 +21,8 @@
   ],
   "dependencies": {
     "babel": "^6.3.26",
-    "babel-cli": "^6.3.17"
+    "babel-cli": "^6.3.17",
+    "findit": "^2.0.0"
   },
   "babel": {
     "presets": [
