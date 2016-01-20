@@ -10,6 +10,15 @@
   },
   "author": "Aram Drevekenin",
   "license": "MIT",
+  "keywords": [
+    "browserify",
+    "browserify-utility",
+    "package.json",
+    "no-browser-field",
+    "no-bf",
+    "include",
+    "exclude"
+  ],
   "dependencies": {
     "babel": "^6.3.26",
     "babel-cli": "^6.3.17"
@@ -29,5 +38,9 @@
     "ncp": "^2.0.0",
     "tape": "^4.4.0",
     "tmp": "0.0.28"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imsnif/browserinc"
   }
 }
